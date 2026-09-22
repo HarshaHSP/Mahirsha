@@ -44,8 +44,8 @@ const CONFIG = {
   // 💌 FREE FORM-TO-EMAIL — see the setup guide you were given.
   // Paste your own Web3Forms Access Key below (this key is meant to be public,
   // it is NOT a password and cannot be used to read your email).
-  web3formsKey: "PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE",
-  notifyEmail: "PASTE_THE_EMAIL_ADDRESS_YOU_WANT_RESPONSES_SENT_TO",
+  web3formsKey: "4eff86cb-4095-43fe-9457-3ead9e920993",
+  notifyEmail: "harshsp.work@gmail.com",
 
   // 💬 REPLIES shown right after she picks an option. {her} is replaced with her name.
   responses: {
