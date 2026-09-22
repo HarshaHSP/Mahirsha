@@ -70,6 +70,17 @@ const CONFIG = {
     finalq: {
       yes:  "🥹❤️ Then let's not rush anything. Let's simply start creating beautiful little moments again — one day, one conversation and one smile at a time. 🌷",
       maybe: "🥺❤️ Maybe is enough for today. You don't have to know everything immediately. Take your time. I'll focus on showing you through my actions what my words mean, and I'll be right here, understanding you."
+    },
+    playful1: {
+      reply: "See, I knew it. 😌❤️ You always say you don't care, but your reply speed says otherwise.",
+      smile: "Caught you. 😏 That little smile gives you away every time, Jaadi.",
+      tease: "5 whole minutes?! Cruel. But honestly, worth the wait if it's you. 😂❤️",
+      call:  "That's exactly what I'd want too — hearing your voice beats any text. 🥺❤️"
+    },
+    playful2: {
+      true:  "Thought so. 😌❤️ Cheesy Harshu still wins, every single time.",
+      deny:  "Suuure, Jaadi. 🙄😂 Your face says otherwise though.",
+      maybe: "'A little' from you basically means 'a lot.' I know you too well. 😏❤️"
     }
   }
 };
@@ -478,6 +489,21 @@ $$('[data-choices]').forEach((group) => {
     }
   });
 })();
+
+/* ---------------------------------------------------------
+   Gallery slide arrows
+   --------------------------------------------------------- */
+function scrollGalleryBy(dir) {
+  const strip = $('#photoGallery');
+  if (!strip) return;
+  const card = strip.querySelector('.polaroid');
+  const step = card ? card.getBoundingClientRect().width + 14 : 150;
+  strip.scrollBy({ left: dir * step * 2, behavior: 'smooth' });
+}
+const galleryPrev = $('#galleryPrev');
+const galleryNext = $('#galleryNext');
+if (galleryPrev) galleryPrev.addEventListener('click', () => scrollGalleryBy(-1));
+if (galleryNext) galleryNext.addEventListener('click', () => scrollGalleryBy(1));
 
 /* ---------------------------------------------------------
    Collect + submit her responses
