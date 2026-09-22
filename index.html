@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2a1a45" />
+  <title>A Little Universe Called Mahudi 🌌💌</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div id="stars" aria-hidden="true"></div>
+  <div id="hearts" aria-hidden="true"></div>
+
+  <button id="muteBtn" class="mute-btn" aria-label="Mute or unmute music">🔊</button>
+
+  <main id="app">
+
+    <!-- ============== OPENING ENVELOPE ============== -->
+    <section class="screen active cosmic" id="screen-envelope">
+      <div class="card">
+        <div class="envelope" data-step data-delay="500">💌</div>
+        <p class="script big" data-step data-type>A little letter for you…</p>
+        <p class="script big" data-step data-type>For my {her} 🌹</p>
+        <button class="btn" data-step data-next>Tap to open ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== HEY JAANU ============== -->
+    <section class="screen cosmic" id="screen-hey">
+      <div class="card">
+        <p class="script big" data-step data-type>Hey Jaanu 🌹💐</p>
+        <p data-step data-type>How was your day, {her}? ❤️</p>
+        <p data-step data-type>Before anything else…</p>
+        <p class="script emphasis" data-step data-type>I love you, {her}. ❤️</p>
+        <p data-step data-type>I miss you. 🥺</p>
+        <p data-step data-type>And I made this little world just for you. 🌌🧸🐱🐼❤️</p>
+        <p class="soft" data-step data-type>So take your time… there is no rush. Just explore it with your beautiful smile. ❤️</p>
+        <button class="btn" data-step data-next>Okay ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== FIRST MOMENT — I LOVE YOU ============== -->
+    <section class="screen" id="screen-loveyou">
+      <div class="card">
+        <p data-step data-type>{her}… before I say anything else, I just want these words to reach your heart first.</p>
+        <p class="script emphasis" data-step data-type>I LOVE YOU. ❤️</p>
+        <p data-step data-type>And I miss you more than I sometimes know how to explain. 🥺</p>
+        <p data-step data-type>I miss your beautiful smile, your cute face, your adorable little nose, your eyes, your sweet voice, your random messages, your silly conversations and all those tiny things that somehow became such a big part of my heart.</p>
+        <p data-step data-type>I miss hearing you call me "Harshu" in that sweet voice of yours. 🥺❤️</p>
+        <p data-step data-type>Sometimes I imagine that moment again and honestly… I don't know whether I'd smile first or get emotional first. I feel like those could actually be happy tears. 🥹❤️</p>
+        <p class="script lead" data-step data-type>Some voices are just voices. Yours became a feeling. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== HER UNIVERSE ============== -->
+    <section class="screen cosmic" id="screen-universe">
+      <div class="card">
+        <p data-step data-type>Mahu… do you know something? 🌌</p>
+        <p data-step data-type>You have your own little universe of things that make you you.</p>
+        <p class="memory" data-step data-delay="700">Your smile.</p>
+        <p class="memory" data-step data-delay="700">Your expressions.</p>
+        <p class="memory" data-step data-delay="700">Your cute little nose.</p>
+        <p class="memory" data-step data-delay="700">Your eyes.</p>
+        <p class="memory" data-step data-delay="700">Your sweet voice.</p>
+        <p class="memory" data-step data-delay="700">Your little habits.</p>
+        <p class="memory" data-step data-delay="700">Your "Harshu." 🥺</p>
+        <p class="soft" data-step data-type>And somewhere along the way, I started loving all those tiny things more than I ever realised.</p>
+        <p class="script lead" data-step data-type>You're not just someone I love. You're someone whose little details became memories inside me. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== MEMORY PHOTO 1 ============== -->
+    <section class="screen" id="screen-photo1">
+      <div class="card">
+        <p class="lead" data-step data-type>Put one of your favourite pictures here.</p>
+        <figure class="polaroid solo" id="photoOne" data-step data-delay="500"></figure>
+        <p class="script big" data-step data-type>This smile… 🥹❤️</p>
+        <p data-step data-type>I don't think you realise how beautiful you look when you smile.</p>
+        <p data-step data-type>Sometimes I could just look at that smile and forget whatever was happening around me.</p>
+        <p class="soft" data-step data-type>Please never lose that smile, Jaanu. 🌹</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== PLAYFUL MEMORY QUESTION ============== -->
+    <section class="screen" id="screen-freeday">
+      <div class="card">
+        <p class="script big" data-step data-type>Okay Nom Nom… one tiny question. 😌🐱🧸</p>
+        <p data-step data-type>If we suddenly got one completely free day together, what would you choose?</p>
+
+        <div class="options" data-step data-choices="freeday" data-question="If we had one completely free day together, what would you choose?">
+          <button class="option" data-choice="stars">🌌 A night under the stars</button>
+          <button class="option" data-choice="teddy">🧸 A cozy teddy-and-movie day</button>
+          <button class="option" data-choice="kittens">🐱 Playing with kittens</button>
+          <button class="option" data-choice="panda">🐼 Doing absolutely nothing and just annoying each other 😂</button>
+          <button class="option" data-choice="all">❤️ All of the above</button>
+        </div>
+        <p class="response" data-late></p>
+        <button class="btn" data-late data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== HER LITTLE THINGS ============== -->
+    <section class="screen" id="screen-littlethings">
+      <div class="card">
+        <p data-step data-type>I miss the little things too, Jaanu.</p>
+        <p class="memory" data-step data-delay="700">Your random messages.</p>
+        <p class="memory" data-step data-delay="700">Your voice.</p>
+        <p class="memory" data-step data-delay="700">The way you say certain words.</p>
+        <p class="memory" data-step data-delay="700">The way you call me Harshu.</p>
+        <p data-step data-type>Those silly conversations that had absolutely no purpose but somehow became some of my favourite conversations.</p>
+        <p data-step data-type>Waiting for your "Good morning" used to feel like such a small thing… but somehow it could change the whole mood of my morning. 🥺❤️</p>
+        <p class="script lead" data-step data-type>And when that little notification appeared from you, there was always that tiny happiness inside me like: "It's Mahudi." ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== MEMORY PHOTO 2 ============== -->
+    <section class="screen" id="screen-photo2">
+      <div class="card">
+        <figure class="polaroid solo" id="photoTwo" data-step data-delay="500"></figure>
+        <p class="script big" data-step data-type>One of those moments I wish I could keep forever. ❤️</p>
+        <p data-step data-type>Maybe the moment itself was ordinary.</p>
+        <p class="soft" data-step data-type>But because it was with you, it became special.</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== HER BEAUTY ============== -->
+    <section class="screen" id="screen-beauty">
+      <div class="card">
+        <p data-step data-type>{her}… I don't think I praise you enough for the little things I notice.</p>
+        <p class="memory" data-step data-delay="700">Your smile is beautiful.</p>
+        <p class="memory" data-step data-delay="700">Your face is ridiculously cute. 🥺</p>
+        <p class="memory" data-step data-delay="700">Your little nose is adorable. ❤️</p>
+        <p class="memory" data-step data-delay="700">Your eyes have this softness that I could keep looking at.</p>
+        <p data-step data-type>And your voice… that sweet voice of yours has its own place in my heart. Especially when you say "Harshu."</p>
+        <p class="script lead" data-step data-type>Jaanu, one day I genuinely want to hear you say it and just smile without saying anything back. Because sometimes one tiny word from the right person can mean more than a hundred messages. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== DUMBO SURPRISE ============== -->
+    <section class="screen" id="screen-dumbo">
+      <div class="card">
+        <p class="script big" data-step data-type>Dumbooo… 😂🐼</p>
+        <p data-step data-type>You know you're cute, right?</p>
+        <p data-step data-type>Actually...</p>
+        <p class="script emphasis small" data-step data-type>Too cute.</p>
+        <p data-step data-type>And sometimes unnecessarily adorable. 😭❤️</p>
+        <p data-step data-type>Don't argue. This page is legally allowed to expose you. 😂🐼❤️</p>
+        <p class="soft" data-step data-type>But don't worry, Jaadi… your secrets are safe with me. 🤫❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== WHAT YOU ALREADY KNOW ABOUT HER ============== -->
+    <section class="screen" id="screen-knowher">
+      <div class="card">
+        <p data-step data-type>I already know so many of your little favourites, the things you like, the things you don't like, the food you enjoy, the things that make you happy and so many little details that make you you. ❤️</p>
+        <p data-step data-type>And honestly, I love that I know those things about you.</p>
+        <p data-step data-type>But I also know there is always more to discover about a person you love — the thoughts you don't always say, the little things that make your mood better, the dreams you haven't spoken about much, the things that comfort you on difficult days, the tiny habits I may not have noticed yet, and all those beautiful little pieces of you that make Mahudi who she is. 🌷🥺</p>
+        <p data-step data-type>I don't want to know you just through your favourites.</p>
+        <p class="script lead" data-step data-type>I want to keep understanding your heart, your thoughts, your dreams and the little things that make you smile. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== A LITTLE QUESTION ============== -->
+    <section class="screen" id="screen-remember">
+      <div class="card">
+        <p class="script big" data-step data-type>Mahu… tell me honestly. ❤️</p>
+        <p data-step data-type>Do you still sometimes remember our silly conversations?</p>
+
+        <div class="options" data-step data-choices="remember" data-question="Do you still sometimes remember our silly conversations?">
+          <button class="option" data-choice="yes">❤️ Yes</button>
+          <button class="option" data-choice="maybe">🥺 Maybe</button>
+        </div>
+        <p class="response" data-late></p>
+        <p class="soft" data-late data-type>No pressure. I don't need a perfect answer. I just want your honest little heart. ❤️</p>
+        <button class="btn" data-late data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== MILKY WAY MEMORY ============== -->
+    <section class="screen cosmic" id="screen-milkyway">
+      <div class="card">
+        <p class="script big" data-step data-type>Imagine this...</p>
+        <p data-step data-type>Just you and me under the Milky Way. 🌌 Tiny kittens running around. 🐱 Two silly teddy bears sitting beside us. 🧸 A panda photobombing us. 🐼😂 Flowers everywhere. 🌹 And thousands of stars above us. ✨</p>
+        <p data-step data-type>No phones. No stress. No outside noise. Just one peaceful night together.</p>
+        <p class="lead" data-step data-type>What would you choose?</p>
+
+        <div class="options" data-step data-choices="milkyway" data-question="Under the Milky Way, just the two of us — what would you choose?">
+          <button class="option" data-choice="stars">🌌 Look at the stars</button>
+          <button class="option" data-choice="talk">❤️ Talk for hours</button>
+          <button class="option" data-choice="laugh">😂 Laugh about something completely stupid</button>
+          <button class="option" data-choice="photos">📸 Take 100 pictures</button>
+          <button class="option" data-choice="quiet">🥺 Just sit quietly together</button>
+        </div>
+        <p class="response" data-late></p>
+        <button class="btn" data-late data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== MEMORY PHOTO 3 ============== -->
+    <section class="screen" id="screen-photo3">
+      <div class="card">
+        <figure class="polaroid solo" id="photoThree" data-step data-delay="500"></figure>
+        <p class="script big" data-step data-type>Some memories don't need an explanation. ❤️</p>
+        <p class="soft" data-step data-type>They just stay.</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== GALLERY OF LITTLE MOMENTS ============== -->
+    <section class="screen cosmic" id="screen-gallery">
+      <div class="card wide">
+        <p class="script big" data-step data-type>A few more little moments I never want to forget… 🌌🧸🐱🐼🌹</p>
+        <div class="photo-strip" id="photoGallery" data-step data-delay="500"></div>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== WHAT YOU WANT TO BE FOR HER ============== -->
+    <section class="screen" id="screen-bewant">
+      <div class="card">
+        <p data-step data-type>{her}, more than anything, I want to be someone who makes your life feel a little lighter.</p>
+        <p class="memory" data-step data-delay="650">Someone you can talk to when you're happy.</p>
+        <p class="memory" data-step data-delay="650">Someone you can talk to when you're stressed.</p>
+        <p class="memory" data-step data-delay="650">Someone you can tell when you're scared.</p>
+        <p class="memory" data-step data-delay="650">Someone you can tell when you're overthinking.</p>
+        <p class="memory" data-step data-delay="650">Someone who listens when your heart feels heavy.</p>
+        <p class="memory" data-step data-delay="650">Someone who celebrates your happiness without making it about himself.</p>
+        <p class="memory" data-step data-delay="650">Someone who stands beside you without trying to control you.</p>
+        <p class="memory" data-step data-delay="650">Someone who respects your space while still making sure you know you're loved.</p>
+        <p data-step data-type>I don't want to be another source of pressure in your life.</p>
+        <p class="script lead" data-step data-type>I want to be a safe place. 🤍</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== THE TRUST PAGE ============== -->
+    <section class="screen dark" id="screen-trust">
+      <div class="card">
+        <p data-step data-type>I know trust cannot be rebuilt just because I write beautiful words.</p>
+        <p data-step data-type>And I know there may still be a part of your heart that wonders: "What if everything becomes like before again?"</p>
+        <p data-step data-type>I understand that fear. I don't want to argue with it. I don't want to ask you to simply forget everything. And I don't want to keep saying, "Trust me."</p>
+        <p data-step data-type>Instead...</p>
+        <p class="lead" data-step data-type>Please take your time.</p>
+        <p data-step data-type>I want to show you. I want my behaviour, patience, communication, reactions and consistency to slowly tell your heart that I am genuinely trying to change myself completely into the person you deserve.</p>
+        <p data-step data-type>Not for a few days. Not only when everything is perfect.</p>
+        <p class="script lead" data-step data-type>Especially when things become difficult. That's where I want you to see the change. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== STAND BESIDE YOU ============== -->
+    <section class="screen" id="screen-stand">
+      <div class="card">
+        <p data-step data-type>Jaanu, I don't want to be there only when everything is beautiful.</p>
+        <p data-step data-type>I want to stand beside you through ordinary days too.</p>
+        <p class="memory" data-step data-delay="650">Your stressful days.</p>
+        <p class="memory" data-step data-delay="650">Your tired days.</p>
+        <p class="memory" data-step data-delay="650">Your confusing days.</p>
+        <p class="memory" data-step data-delay="650">Your happiest days.</p>
+        <p class="memory" data-step data-delay="650">Your biggest achievements.</p>
+        <p class="memory" data-step data-delay="650">Your smallest victories.</p>
+        <p data-step data-type>I want to celebrate the things that make you happy. I want to listen when something hurts. I want to encourage your dreams. I want to respect your family, friends, career, space and individuality.</p>
+        <p data-step data-type>I don't want love to make your world smaller.</p>
+        <p class="script lead" data-step data-type>I want love to make your world feel safer. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== NEGATIVE THOUGHTS PAGE ============== -->
+    <section class="screen dark" id="screen-negative">
+      <div class="card">
+        <p data-step data-type>And when distance makes the mind overthink...</p>
+        <p data-step data-type>Let's not immediately believe every thought.</p>
+        <p class="memory" data-step data-delay="650">A delayed reply doesn't automatically mean something changed.</p>
+        <p class="memory" data-step data-delay="650">Missing someone doesn't mean they're becoming distant.</p>
+        <p class="memory" data-step data-delay="650">A difficult day doesn't mean everything is falling apart.</p>
+        <p class="memory" data-step data-delay="650">Feeling insecure doesn't automatically mean something is wrong.</p>
+        <p data-step data-type>If something ever hurts, scares or confuses you... tell me. We can talk. We can understand. We can clear it. We can let the unnecessary thought go.</p>
+        <p class="script lead" data-step data-type>I want communication to be stronger than assumptions. I want your heart to feel free to speak. 🤍</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== HARSHU MOMENT ============== -->
+    <section class="screen" id="screen-harshu">
+      <div class="card">
+        <p class="script big" data-step data-type>Okay Mahudi... one very serious question. 😂❤️</p>
+        <p data-step data-type>If tomorrow you suddenly called me: "Harshuuuu…" 🥺❤️ in that sweet voice of yours...</p>
+        <p data-step data-type>Do you know what would happen?</p>
+        <p data-step data-type>I'd probably smile like an idiot. 😂</p>
+        <p data-step data-type>And honestly... I might even get those stupid happy tears I've been talking about. 🥹❤️</p>
+        <p class="script lead" data-step data-type>Because I don't just miss hearing my name. I miss hearing it from you.</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== WHAT I ACTUALLY WANT ============== -->
+    <section class="screen" id="screen-actuallywant">
+      <div class="card">
+        <p data-step data-type>I don't need a perfect relationship. I don't need perfect days. I don't need constant messages. I don't need you to prove your love every minute.</p>
+        <p data-step data-type>I don't want to control your life. I don't want to take away your freedom. I don't want you to be afraid of my reactions.</p>
+        <p data-step data-type>I simply want something honest.</p>
+        <p class="memory" data-step data-delay="650">Something where both hearts can talk.</p>
+        <p class="memory" data-step data-delay="650">Something where mistakes can be discussed.</p>
+        <p class="memory" data-step data-delay="650">Something where trust can grow.</p>
+        <p class="memory" data-step data-delay="650">Something where love feels peaceful.</p>
+        <p class="memory" data-step data-delay="650">Something where both people can remain themselves.</p>
+        <p class="script lead" data-step data-type>And something we can slowly make beautiful together. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== FOREVER WITHOUT PRESSURE ============== -->
+    <section class="screen cosmic" id="screen-forever">
+      <div class="card">
+        <p data-step data-type>When I say I want you in my life for a long, long time, I don't mean that as pressure on your heart.</p>
+        <p data-step data-type>I don't want you to promise me forever today.</p>
+        <p data-step data-type>For me, forever isn't one big sentence. It's thousands of small choices.</p>
+        <p class="memory" data-step data-delay="600">Choosing honesty.</p>
+        <p class="memory" data-step data-delay="600">Choosing patience.</p>
+        <p class="memory" data-step data-delay="600">Choosing loyalty.</p>
+        <p class="memory" data-step data-delay="600">Choosing communication.</p>
+        <p class="memory" data-step data-delay="600">Choosing understanding.</p>
+        <p class="memory" data-step data-delay="600">Choosing growth.</p>
+        <p class="memory" data-step data-delay="600">Choosing each other on ordinary days.</p>
+        <p data-step data-type>If someday this becomes a lifelong story... ♾️ I want it to happen because both hearts freely chose it again and again.</p>
+        <p data-step data-type>Not because either heart was forced. Not because of fear. Not because of pressure.</p>
+        <p class="script lead" data-step data-type>Just because the relationship became something worth protecting. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== LOVE LETTER — HER BEAUTY & HER HEART ============== -->
+    <section class="screen dark" id="screen-loveletter">
+      <div class="card">
+        <p class="script big" data-step data-type>My {her}...</p>
+        <p data-step data-type>Every single time I see you, I fall in love all over again — like it's the first time and the hundredth time, both at once.</p>
+        <p data-step data-type>Your beauty isn't just your smile, your eyes, your face, though I could write pages about those alone.</p>
+        <p class="memory" data-step data-delay="650">The way you carry your feelings so honestly.</p>
+        <p class="memory" data-step data-delay="650">The way you care, even when you're hurting yourself.</p>
+        <p class="memory" data-step data-delay="650">Your strength, even on the days you don't feel strong.</p>
+        <p class="memory" data-step data-delay="650">Your kindness, that you give so freely.</p>
+        <p class="memory" data-step data-delay="650">Your patience with a world that doesn't always deserve it.</p>
+        <p class="memory" data-step data-delay="650">The softness in you that only the right person gets to see.</p>
+        <p data-step data-type>That's the beauty I fell for. Not just how you look — who you are.</p>
+        <p class="script lead" data-step data-type>And {her}… I don't love you for a day, or a year, or a season.</p>
+        <p class="script emphasis small" data-step data-type>I love you forever and ever. No end to it. ♾️❤️</p>
+        <p data-step data-type>Not because it's easy. Because it's you.</p>
+        <p data-step data-type>I don't need anything grand from you. I don't need perfect words or perfect days.</p>
+        <p class="script lead" data-step data-type>I just need your support. Stand beside me, {her}, and I will spend every single day proving this was worth choosing. ❤️</p>
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== FINAL HEART MESSAGE + HER WORDS ============== -->
+    <section class="screen" id="screen-finalmessage">
+      <div class="card">
+        <p class="script big" data-step data-type>Mahudi...</p>
+        <p data-step data-type>I don't know exactly what your heart feels while reading this. And I'm not going to tell you what you should feel.</p>
+        <p data-step data-type>I don't want a forced "I love you." I don't want an answer just because this page is asking you something. I want your real thoughts.</p>
+        <p data-step data-type>If something touched your heart, tell me. If something made you smile, tell me. If something confused you, tell me. If something needs to change, tell me. If something is missing, tell me.</p>
+        <p class="script lead" data-step data-type>And if there is something you want from this relationship that I haven't understood yet... please tell me. I want to learn. ❤️</p>
+
+        <div class="answer-wrap" data-step data-question="What's in your heart after reading this?">
+          <textarea id="heartAnswer" rows="4" maxlength="800" placeholder="Whatever is in your heart… type it here ✍️"></textarea>
+          <div class="typing-dots" id="typingDots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="note">💭 Take your time. This stays just between us.</p>
+        </div>
+
+        <button class="btn" data-step data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== FINAL QUESTION ============== -->
+    <section class="screen cosmic" id="screen-finalquestion">
+      <div class="card">
+        <p class="script big" data-step data-type>One last little question, Mahudi... 🥺❤️</p>
+        <p data-step data-type>After everything we've shared... the laughter, the silly conversations, the beautiful memories, the difficult moments, the lessons, the little "Harshu"s, the smiles, the moments that only we understand...</p>
+        <p class="lead" data-step data-type>Do you feel that same understanding between us, and a little space in your heart where we can slowly create something beautiful again? 🌹</p>
+
+        <div class="options" data-step data-choices="finalq" data-question="Is there still that understanding between us, and space in your heart for us?">
+          <button class="option" data-choice="yes">❤️ YES</button>
+          <button class="option" data-choice="maybe">🥺 MAYBE</button>
+        </div>
+        <p class="response" data-late></p>
+        <button class="btn" data-late data-next>Continue ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== FINAL ENVELOPE / ENDING ============== -->
+    <section class="screen cosmic" id="screen-ending">
+      <div class="card">
+        <p data-step data-type>Hey Jaanu... one last thing. ❤️</p>
+        <p data-step data-type>I love you. I miss you. I care about you. I admire you. I believe in you. And I want to see you happy.</p>
+        <p data-step data-type>I want to hear your sweet voice. I want to see that beautiful smile. I want to hear you call me Harshu again.</p>
+        <p data-step data-type>I want to laugh with you. I want to make silly memories with you. I want to support your dreams. I want to earn your trust. I want to prove my commitment.</p>
+        <p data-step data-type>And I want to become better — not just by saying it, but by living it. ❤️</p>
+        <p data-step data-type>So, Mahudi... take your time. Keep your beautiful smile. Keep being the beautiful, strong, kind and special person you are.</p>
+        <p data-step data-type>And whenever you look at these stars... remember that somewhere in this little universe, there is one silly boy who loves his Jaanu, Mahu, Maddy, Dumbo, Jaadi, Nom Nom more than he knows how to put into words. 🌌🧸🐱🐼❤️</p>
+        <p class="script big" data-step data-type data-celebrate>I love you. ❤️ I miss you. 🥺</p>
+        <p class="script lead" data-step data-type>And I want to keep creating beautiful memories with you. 🌹♾️</p>
+        <p class="signature script" data-step data-type>— Harshu ❤️</p>
+
+        <button class="btn keep-btn" id="keepBtn" data-step>Keep this little chapter with me ❤️</button>
+      </div>
+    </section>
+
+    <!-- ============== SUCCESS ============== -->
+    <section class="screen cosmic" id="screen-success">
+      <div class="card">
+        <p class="script big" data-step data-type>And now this little chapter has a place to stay. ❤️</p>
+        <p data-step data-type>Thank you for walking through our story with me, Mahudi.</p>
+        <p class="script lead" data-step data-type data-celebrate>Until the next chapter… 🌙❤️</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FAIL OVERLAY ============== -->
+  <div class="overlay" id="failOverlay">
+    <div class="card">
+      <p class="script big">Something interrupted our little chapter… 🥺</p>
+      <button class="btn" id="retryBtn">Try again ❤️</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
